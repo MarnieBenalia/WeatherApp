@@ -1,0 +1,16 @@
+@import 'assets/_mixins';
+// pour importer un élément: @include absolute-el()
+@import 'assets/_placeholders'; 
+// pour importer un élément: @extend %lenomdetonplaceholder
+@import 'assets/_variables';
+// pour importer un élément: $exemplecouleur
+
+body{
+    margin:0;
+    padding:0;
+    background-color: $fond-clair;
+}
+
+header{
+    margin:7vw;
+}

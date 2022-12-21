@@ -1,0 +1,14 @@
+//bouts de code réétulisable avec des paramètres//
+//Pour importer : @import './_mixins';//
+
+//pour le mettre dans scss //
+
+@mixin absolute-el ($top, $right, $bottom, $left, $x, $y){
+
+        position: absolute;
+        top:$top;
+        right:$right;
+        bottom: $bottom;
+        left: $left;
+        transform: translate($x,$y)
+}
