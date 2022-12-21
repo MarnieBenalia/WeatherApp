@@ -1,8 +1,8 @@
 let input = document.querySelector("input"),
     Button = document.querySelector("button"),
     cityEnter = document.querySelector("h1"),
-    temps = document.querySelector("p"),
-    icon01 = document.querySelector("img")
+    temps = document.querySelector(".temps"),
+    icon01 = document.querySelector("img"),
     date = document.querySelector("h3")
 
 Button.addEventListener('click',() =>{

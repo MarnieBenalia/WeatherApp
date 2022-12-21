@@ -13,12 +13,13 @@ header {
 }
 
 .input {
-  width: 75%;
+  width: 85%;
+  font-size: 0.9em;
   text-align: center;
   color: #052f6b;
   border: none;
   margin-bottom: 1em;
-  padding: 0.3em;
+  padding: 0.6em;
 }
 .input:focus {
   border: 0, 1px solid #0857da;
