@@ -4,6 +4,7 @@ let input = document.querySelector("input"),
     temps = document.querySelector(".temps"),
     icon01 = document.querySelector("img"),
     date = document.querySelector("h3")
+    degre = document.querySelector(".degre")
 
 Button.addEventListener('click',() =>{
 
@@ -21,6 +22,7 @@ Button.addEventListener('click',() =>{
         temps.textContent = json.weather[0].description,
         icon01.src = json.weather[0].icon,
         date.textContent = json.dt
+        degre.textContent = json.main.temp_max
     })
 })
 
