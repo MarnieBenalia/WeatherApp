@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <link rel="stylesheet" href="scss/style.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,26 +11,33 @@
     <!-- <link rel="shortcut icon" href=""> -->
     <link rel="stylesheet" href="scss/style.css">
     <script defer src="js/script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet"> 
     <title>WeatherApp</title>
-
 </head>
 
 <body>
 
     <header>
-
-        <input type="text" class="input">
+        <input type="text" class="input" placeholder="ENTER YOUR LOCATION">
         <button id="button">Submit</button>
         <h1 id="city"></h1>
-
     </header>
 
     <main>
-
-        <div id="card">
+        <div id="cards">
+            <div class="day">
+                <div id="datetemps">
+                    <h3 class="date"></h3>
+                    <p class ="temps"></p>
+                </div>
+                <div class="icon"> 
+                    <img id="icon01" src="">
+                </div>
+                <div class="degre"> 
+                    <h2 class="degre"></h2>   
+                 </div>
+            </div>    
         </div>
-
     </main>
-
 </body>
 </html>
