@@ -29,10 +29,6 @@ header{
     border:none;
     margin-bottom: 1em;
     padding: 0.6em;
-    &:focus{
-    border: 0,1px solid $blue;   
-    list-style-type: none; 
-    }
 }
 
 #button{
@@ -55,10 +51,10 @@ header{
 main{
     display:flex;
     justify-content: center;
-
 }
 
 #cards{
+    font-family: 'Raleway', sans-serif;
     display: flex;
     align-items: center;
     padding: 5%;
@@ -67,9 +63,22 @@ main{
     background-color: $blue;
     border-radius:1em;
     color: white;
-
+}
+#day01{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
 }
 
-#icon01{
-    width:5em;
+/*#icon01{
+    background-color: aqua;
+}*/
+
+.degre{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 4em;
+    margin-left: 0.9em;
 }

@@ -21,10 +21,6 @@ header {
   margin-bottom: 1em;
   padding: 0.6em;
 }
-.input:focus {
-  border: 0, 1px solid #0857da;
-  list-style-type: none;
-}
 
 #button {
   background-color: #0857da;
@@ -46,6 +42,7 @@ main {
 }
 
 #cards {
+  font-family: "Raleway", sans-serif;
   display: flex;
   align-items: center;
   padding: 5%;
@@ -56,6 +53,20 @@ main {
   color: white;
 }
 
-#icon01 {
-  width: 5em;
+#day01 {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+/*#icon01{
+    background-color: aqua;
+}*/
+.degre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 4em;
+  margin-left: 0.9em;
 }/*# sourceMappingURL=style.css.map */
