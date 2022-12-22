@@ -6,7 +6,7 @@ body {
 }
 
 header {
-  margin: 7vw;
+  margin-top: 7vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,16 +14,18 @@ header {
 
 .input {
   width: 85%;
-  font-size: 0.9em;
+  height: 1.3em;
+  font-size: 1.5em;
   text-align: center;
   color: #052f6b;
   border: none;
   margin-bottom: 1em;
-  padding: 0.6em;
+  padding: 0.3em;
 }
 
 #button {
   background-color: #0857da;
+  font-size: 1em;
   width: 8em;
   color: white;
   padding: 0.5em;
@@ -34,39 +36,39 @@ header {
 #city {
   font-family: "Roboto Condensed", sans-serif;
   text-transform: uppercase;
+  font-size: 4em;
 }
 
-main {
-  display: flex;
+.cards {
+  display: none;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
-#cards {
-  font-family: "Raleway", sans-serif;
+.card {
   display: flex;
+  flex-direction: row;
+  justify-content: space-around;
   align-items: center;
-  padding: 5%;
-  width: 85%;
-  height: 5em;
+  width: 90%;
+  margin-bottom: 3%;
+  font-family: "Raleway", sans-serif;
+  height: 7em;
   background-color: #0857da;
   border-radius: 1em;
   color: white;
 }
 
-#day01 {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
+.img {
+  width: 7.1em;
 }
 
-/*#icon01{
-    background-color: aqua;
-}*/
+.dt {
+  font-size: 1.3em;
+  width: 10em;
+}
+
 .degre {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-size: 4em;
-  margin-left: 0.9em;
+  font-size: 3em;
 }/*# sourceMappingURL=style.css.map */
