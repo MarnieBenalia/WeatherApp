@@ -28,7 +28,7 @@ let input = document.querySelector("input")
     deg05  = document.getElementById("deg05")
 //------------------------------------------------------------------------------------------//
 
-function date (month){
+function date (date){
 
     const MONTH = [
         "Janvier",
@@ -45,8 +45,9 @@ function date (month){
         "Décembre",
     ];
 
-    let affmonth = new Date (month).getMonth();
-    return MONTH [affmonth]
+    let affdate = new Date (date).getDate();
+    let affmonth = new Date (date).getMonth();
+    return `${affdate} ${MONTH[affmonth]}`
 
 }
 
@@ -62,13 +63,12 @@ Button.addEventListener('click',() =>{
     search(city)
     .then((r => r.json ()))
     .then((json)=>{
-     console.log(json)
+        
     if (city == '' ){
 
         window.alert("attention champ vide");
 
     }    
-
     else{
 
         cards.style.display="flex";
@@ -79,20 +79,26 @@ Button.addEventListener('click',() =>{
         temps01.textContent = json.list[0].weather[0].description
         date01.textContent = json.list[0].dt_txt.split(" ")[0]
 
-        let affmonth01 = date (date01.textContent)
-        //console.log(affmonth01)
-        document.getElementById('d01').innerHTML = date01.textContent + affmonth01
+        let affdate01 = date (date01.textContent)
+        document.getElementById('d01').innerHTML = affdate01
 
         icon01.src = "http://openweathermap.org/img/wn/"+json.list[0].weather[0].icon+"@2x.png"
         deg01.textContent = (json.list[0].main.temp_max.toFixed(0)+"c°")
 //--02------------------------------------------------------------//
         temps02.textContent = json.list[10].weather[0].description
         date02.textContent = json.list[10].dt_txt.split(" ")[0]
+
+        let affdate02 = date (date02.textContent)
+        document.getElementById('d02').innerHTML = affdate02
+
         icon02.src = "http://openweathermap.org/img/wn/"+json.list[10].weather[0].icon+"@2x.png"
         deg02.textContent = (json.list[10].main.temp_max.toFixed(0)+"c°")
 //--03------------------------------------------------------------//
         temps03.textContent = json.list[15].weather[0].description,
         date03.textContent = json.list[15].dt_txt.split(" ")[0]
+
+        let affdate03 = date (date03.textContent)
+        document.getElementById('d03').innerHTML = affdate03
 
         icon03.src = "http://openweathermap.org/img/wn/"+json.list[15].weather[0].icon+"@2x.png"
         deg03.textContent = (json.list[15].main.temp_max.toFixed(0)+"c°")
@@ -100,11 +106,17 @@ Button.addEventListener('click',() =>{
         temps04.textContent = json.list[20].weather[0].description
         date04.textContent = json.list[20].dt_txt.split(" ")[0]
 
+        let affdate04 = date (date04.textContent)
+        document.getElementById('d04').innerHTML = affdate04
+
         icon04.src = "http://openweathermap.org/img/wn/"+json.list[20].weather[0].icon+"@2x.png"
         deg04.textContent = (json.list[20].main.temp_max.toFixed(0)+"c°")
 //--05------------------------------------------------------------//
         temps05.textContent = json.list[30].weather[0].description
         date05.textContent = json.list[30].dt_txt.split(" ")[0]
+
+        let affdate05 = date (date05.textContent)
+        document.getElementById('d05').innerHTML = affdate05
 
         icon05.src = "http://openweathermap.org/img/wn/"+json.list[30].weather[0].icon+"@2x.png"
         deg05.textContent = (json.list[30].main.temp_max.toFixed(0)+"c°")
