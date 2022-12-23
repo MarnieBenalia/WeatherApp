@@ -8,8 +8,10 @@
 body{
     margin:0;
     padding:0;
-    background-color: $fond-clair;
-    color: $txt-darkblue;
+    //background-color: $fond-clair;
+    background-image: url("./images/fond.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 //---------------------------------------------HEADER------------------------------------------------------------------------------//
@@ -24,31 +26,45 @@ header{
 .input{
     width: 85%;
     height: 1.3em;
-    font-size:1.5em;
+    font-size:1.3em;
     text-align: center;
-    color: $txt-darkblue;
+    color: rgb(255, 255, 255);
     border:none;
     margin-bottom: 1em;
     padding: 0.3em;
+    background-color: rgb(255, 255, 255,0.25);
+    &:focus {
+        opacity:1;    
+        color: $txt-darkblue;
+        background-color: rgb(255, 255, 255,1);
+
+    }
 }
 
 #button{
     background-color: $blue;
+    border:none;
     font-size: 1em;
     width:8em;
     color:white;
     padding: 0.5em;
     border-radius: 1.7em;
-    cursor: pointer;
+    &:hover{
+        cursor: pointer;    
+        background-color: white;
+        color:$blue;
+    }
 }
 
 #city{
     font-family: 'Roboto Condensed', sans-serif;
     text-transform:uppercase;
     font-size: 4em;
+    color: white;
 }
 
 //---------------------------------------------Card------------------------------------------------------------------------------//
+
 .cards{
     display: none;
     justify-content: center;
@@ -65,16 +81,21 @@ header{
     margin-bottom: 3%;
     font-family: 'Raleway', sans-serif;
     height: 7em;
-    background-color: $blue;
     border-radius:1em;
     color:white;
+    padding:3%;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.75);
 }
+
 .img{
     width:7.1em;
 }
+
 .dt{
     font-size:1.3em;
-    width: 10em;
+    width: 8em;
 
 }
 

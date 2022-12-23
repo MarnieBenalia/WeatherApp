@@ -28,9 +28,32 @@ let input = document.querySelector("input")
     deg05  = document.getElementById("deg05")
 //------------------------------------------------------------------------------------------//
 
+function date (month){
+
+    const MONTH = [
+        "Janvier",
+        "Fevrier",
+        "Mars",
+        "Avril",
+        "Mai",
+        "Juin",
+        "Juillet",
+        "Aout",
+        "Septembre",
+        "Octobre",
+        "Novembre",
+        "Décembre",
+    ];
+
+    let affmonth = new Date (month).getMonth();
+    return MONTH [affmonth]
+
+}
+
+//--------------------------------------------------------------//  
+
 Button.addEventListener('click',() =>{
     let cards =document.getElementsByClassName("cards")[0]
-    cards.style.display="flex"
 
 //--------------------------------------------------------------//   
  
@@ -39,15 +62,27 @@ Button.addEventListener('click',() =>{
     search(city)
     .then((r => r.json ()))
     .then((json)=>{
-
+     console.log(json)
     if (city == '' ){
 
         window.alert("attention champ vide");
+
     }    
+
+    else{
+
+        cards.style.display="flex";
+    }
         cityEnter.textContent = json.city.name
+
 //--01------------------------------------------------------------//
         temps01.textContent = json.list[0].weather[0].description
         date01.textContent = json.list[0].dt_txt.split(" ")[0]
+
+        let affmonth01 = date (date01.textContent)
+        //console.log(affmonth01)
+        document.getElementById('d01').innerHTML = date01.textContent + affmonth01
+
         icon01.src = "http://openweathermap.org/img/wn/"+json.list[0].weather[0].icon+"@2x.png"
         deg01.textContent = (json.list[0].main.temp_max.toFixed(0)+"c°")
 //--02------------------------------------------------------------//
@@ -57,17 +92,20 @@ Button.addEventListener('click',() =>{
         deg02.textContent = (json.list[10].main.temp_max.toFixed(0)+"c°")
 //--03------------------------------------------------------------//
         temps03.textContent = json.list[15].weather[0].description,
-        date03.textContent = json.list[15].dt_txt.split(" ")[0],
+        date03.textContent = json.list[15].dt_txt.split(" ")[0]
+
         icon03.src = "http://openweathermap.org/img/wn/"+json.list[15].weather[0].icon+"@2x.png"
         deg03.textContent = (json.list[15].main.temp_max.toFixed(0)+"c°")
 //--04------------------------------------------------------------//
         temps04.textContent = json.list[20].weather[0].description
         date04.textContent = json.list[20].dt_txt.split(" ")[0]
+
         icon04.src = "http://openweathermap.org/img/wn/"+json.list[20].weather[0].icon+"@2x.png"
         deg04.textContent = (json.list[20].main.temp_max.toFixed(0)+"c°")
 //--05------------------------------------------------------------//
         temps05.textContent = json.list[30].weather[0].description
         date05.textContent = json.list[30].dt_txt.split(" ")[0]
+
         icon05.src = "http://openweathermap.org/img/wn/"+json.list[30].weather[0].icon+"@2x.png"
         deg05.textContent = (json.list[30].main.temp_max.toFixed(0)+"c°")
 
