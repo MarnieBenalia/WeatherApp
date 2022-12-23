@@ -102,3 +102,25 @@ header{
 .degre{
     font-size:3em;
 }
+
+@media screen and (min-width: 1023px) {
+    .cards{
+        flex-direction: row;
+  
+    }
+    
+    .card{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width:15%;
+        height: auto;
+        border-radius:1em;
+        color:white;
+        padding:1%;
+        margin-right:2%;
+
+    }
+
+}
