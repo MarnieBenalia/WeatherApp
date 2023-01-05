@@ -59,7 +59,7 @@ Button.addEventListener('click',() =>{
 //--------------------------------------------------------------//   
  
     let city = input.value
-    let search= (city) => fetch ('http://api.openweathermap.org/data/2.5/forecast?q='+city+'&units=metric&APPID=93470c9d125ec60da741809a54f81589')
+    let search= (city) => fetch ('https://api.openweathermap.org/data/2.5/forecast?q='+city+'&units=metric&APPID=93470c9d125ec60da741809a54f81589')
     search(city)
     .then((r => r.json ()))
     .then((json)=>{
