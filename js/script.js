@@ -73,7 +73,7 @@ Button.addEventListener('click',() =>{
 
         cards.style.display="flex";
     }
-        cityEnter.textContent = json.city.name
+        cityEnter.textContent = json.city.name;
 
 //--01------------------------------------------------------------//
         temps01.textContent = json.list[0].weather[0].description
@@ -103,14 +103,14 @@ Button.addEventListener('click',() =>{
         icon03.src = "http://openweathermap.org/img/wn/"+json.list[15].weather[0].icon+"@2x.png"
         deg03.textContent = (json.list[15].main.temp_max.toFixed(0)+"c°")
 //--04------------------------------------------------------------//
-        temps04.textContent = json.list[20].weather[0].description
-        date04.textContent = json.list[20].dt_txt.split(" ")[0]
+        temps04.textContent = json.list[22].weather[0].description
+        date04.textContent = json.list[22].dt_txt.split(" ")[0]
 
         let affdate04 = date (date04.textContent)
         document.getElementById('d04').innerHTML = affdate04
 
-        icon04.src = "http://openweathermap.org/img/wn/"+json.list[20].weather[0].icon+"@2x.png"
-        deg04.textContent = (json.list[20].main.temp_max.toFixed(0)+"c°")
+        icon04.src = "http://openweathermap.org/img/wn/"+json.list[22].weather[0].icon+"@2x.png"
+        deg04.textContent = (json.list[22].main.temp_max.toFixed(0)+"c°")
 //--05------------------------------------------------------------//
         temps05.textContent = json.list[30].weather[0].description
         date05.textContent = json.list[30].dt_txt.split(" ")[0]
@@ -123,3 +123,4 @@ Button.addEventListener('click',() =>{
 
     })
 })
+

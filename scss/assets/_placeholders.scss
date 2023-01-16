@@ -1,13 +1,25 @@
 //bouts de code réétulisable sans paramètres ---POUR FAIRE DU CODE DRY---/
 //Pour importer : @import './_placeholders';//
 
-exemple
-
-%flex-center{
-
-        display: flex;
-        justify-content: center;
-        align-items:center; 
-
+%blur{
+        backdrop-filter: blur(16px) saturate(180%);
+        -webkit-backdrop-filter: blur(16px) saturate(180%);
+        background-color: rgba(17, 25, 40, 0.75);
 }
 
+%reset{
+        html{
+        margin: 0;
+        padding: 0;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+        font-size: 100%;
+        font-weight: normal;
+        }
+
+        ul, ol {
+        list-style: none;
+        }
+
+}

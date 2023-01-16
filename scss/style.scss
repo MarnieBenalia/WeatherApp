@@ -1,34 +1,29 @@
 @import 'assets/_mixins';
-// pour importer un élément: @include absolute-el()
 @import 'assets/_placeholders'; 
-// pour importer un élément: @extend %lenomdetonplaceholder
 @import 'assets/_variables';
-// pour importer un élément: $exemplecouleur
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+*{
+    @extend %reset;
+}
 
 body{
-    margin:0;
-    padding:0;
-    //background-color: $fond-clair;
-    background-image: url("./images/fond.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
+    @include background(url("./images/fond.jpg"),cover,no-repeat);
 }
 
 //---------------------------------------------HEADER------------------------------------------------------------------------------//
 
 header{
+    @include display(flex, column,"",center);
     margin-top:7vw;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .input{
-    width: 85%;
-    height: 1.3em;
+    @include wihe (85%, 1.3em);
     font-size:1.3em;
     text-align: center;
-    color: rgb(255, 255, 255);
+    color: white;
     border:none;
     margin-bottom: 1em;
     padding: 0.3em;
@@ -37,15 +32,13 @@ header{
         opacity:1;    
         color: $txt-darkblue;
         background-color: rgb(255, 255, 255,1);
+}}
 
-    }
-}
-
-#button{
+.button{
+    @include wihe (8em, "");
     background-color: $blue;
     border:none;
     font-size: 1em;
-    width:8em;
     color:white;
     padding: 0.5em;
     border-radius: 1.7em;
@@ -53,74 +46,63 @@ header{
         cursor: pointer;    
         background-color: white;
         color:$blue;
-    }
-}
+}}
 
-#city{
+.city{
     font-family: 'Roboto Condensed', sans-serif;
+    margin:5%;
     text-transform:uppercase;
-    font-size: 4em;
+    font-size: 3em;
     color: white;
 }
 
 //---------------------------------------------Card------------------------------------------------------------------------------//
 
 .cards{
-    display: none;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+    @include display (none, column,center, center);
 }
 
 .card{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    width:90%;
+    @include display (flex, row,space-around, center);
+    @include wihe (90%, 7em);
+    @extend %blur;
     margin-bottom: 3%;
     font-family: 'Raleway', sans-serif;
-    height: 7em;
     border-radius:1em;
     color:white;
     padding:3%;
-    backdrop-filter: blur(16px) saturate(180%);
-    -webkit-backdrop-filter: blur(16px) saturate(180%);
-    background-color: rgba(17, 25, 40, 0.75);
 }
 
 .img{
-    width:7.1em;
+    @include wihe (7.1em, "");
 }
 
 .dt{
+    @include wihe (8em, "");
     font-size:1.3em;
-    width: 8em;
-
 }
 
 .degre{
     font-size:3em;
 }
 
+//---------------------------------------------MQ------------------------------------------------------------------------------//
+
 @media screen and (min-width: 1023px) {
-    .cards{
-        flex-direction: row;
-  
-    }
-    
-    .card{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width:15%;
-        height: auto;
-        border-radius:1em;
-        color:white;
-        padding:1%;
-        margin-right:2%;
 
-    }
-
+.cards{
+    flex-direction: row;
 }
+    
+.card{
+    @include display (flex, column,center, center);
+    @include wihe (15%, auto);
+    border-radius:1em;
+    color:white;
+    padding:1%;
+    margin-right:2%;
+}
+
+.dt{
+    @include display (flex, column,"", center);
+}}

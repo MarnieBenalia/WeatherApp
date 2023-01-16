@@ -12,3 +12,22 @@
         left: $left;
         transform: translate($x,$y)
 }
+
+@mixin display ($flex,$flex-direction,$justify-content,$align-items ){
+
+        display: $flex;
+        flex-direction: $flex-direction;
+        justify-content: $justify-content;
+        align-items: $align-items;
+}
+
+@mixin wihe ($width, $height){
+        width: $width;
+        height: $height; 
+}
+
+@mixin background ($background-image, $background-size,$background-repeat){
+        background-image: $background-image;
+        background-size: $background-size;
+        background-repeat: $background-repeat;
+}
