@@ -59,7 +59,7 @@ Button.addEventListener('click',() =>{
 //--------------------------------------------------------------//   
  
     let city = input.value
-    let search= (city) => fetch ('http://api.openweathermap.org/data/2.5/forecast?q='+city+'&units=metric&APPID=93470c9d125ec60da741809a54f81589')
+    let search= (city) => fetch ('https://api.openweathermap.org/data/2.5/forecast?q='+city+'&units=metric&APPID=93470c9d125ec60da741809a54f81589')
     search(city)
     .then((r => r.json ()))
     .then((json)=>{
@@ -82,7 +82,7 @@ Button.addEventListener('click',() =>{
         let affdate01 = date (date01.textContent)
         document.getElementById('d01').innerHTML = affdate01
 
-        icon01.src = "http://openweathermap.org/img/wn/"+json.list[0].weather[0].icon+"@2x.png"
+        icon01.src = "https://openweathermap.org/img/wn/"+json.list[0].weather[0].icon+"@2x.png"
         deg01.textContent = (json.list[0].main.temp_max.toFixed(0)+"c°")
 //--02------------------------------------------------------------//
         temps02.textContent = json.list[10].weather[0].description
@@ -91,7 +91,7 @@ Button.addEventListener('click',() =>{
         let affdate02 = date (date02.textContent)
         document.getElementById('d02').innerHTML = affdate02
 
-        icon02.src = "http://openweathermap.org/img/wn/"+json.list[10].weather[0].icon+"@2x.png"
+        icon02.src = "https://openweathermap.org/img/wn/"+json.list[10].weather[0].icon+"@2x.png"
         deg02.textContent = (json.list[10].main.temp_max.toFixed(0)+"c°")
 //--03------------------------------------------------------------//
         temps03.textContent = json.list[15].weather[0].description,
@@ -100,7 +100,7 @@ Button.addEventListener('click',() =>{
         let affdate03 = date (date03.textContent)
         document.getElementById('d03').innerHTML = affdate03
 
-        icon03.src = "http://openweathermap.org/img/wn/"+json.list[15].weather[0].icon+"@2x.png"
+        icon03.src = "https://openweathermap.org/img/wn/"+json.list[15].weather[0].icon+"@2x.png"
         deg03.textContent = (json.list[15].main.temp_max.toFixed(0)+"c°")
 //--04------------------------------------------------------------//
         temps04.textContent = json.list[22].weather[0].description
@@ -118,7 +118,7 @@ Button.addEventListener('click',() =>{
         let affdate05 = date (date05.textContent)
         document.getElementById('d05').innerHTML = affdate05
 
-        icon05.src = "http://openweathermap.org/img/wn/"+json.list[30].weather[0].icon+"@2x.png"
+        icon05.src = "https://openweathermap.org/img/wn/"+json.list[30].weather[0].icon+"@2x.png"
         deg05.textContent = (json.list[30].main.temp_max.toFixed(0)+"c°")
 
     })
